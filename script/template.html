@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            {{ range . }}
+            <div class="card mb-5">
+                <div class="card-image">
+                    <figure class="image is-3by1">
+                        <img src="{{ .Image }}" alt="Placeholder image" loading="lazy">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-4">{{ .Title }}</p>
+                            <p class="subtitle is-6">Emision du {{ .Date }}</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        {{ .Description }}
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="{{ .URL}} " class="card-footer-item">Audio</a>
+                    <a href="{{ .Link}} " class="card-footer-item">Lien</a>
+                </footer>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+</body>
+
+</html>
