@@ -65,7 +65,7 @@ func createHTML(jsonData []byte, filename string) {
 		log.Fatal(err)
 	}
 
-	err = os.WriteFile("../public/"+filename, tpl.Bytes(), 0644)
+	err = os.WriteFile("../docs/"+filename, tpl.Bytes(), 0644)
 	if err != nil {
 		log.Fatal(err)
 	}
