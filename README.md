@@ -1,3 +1,3 @@
 # Podcasts
 
-[Link](https://alexjomin.github.io/podcasts/) 
+[Link](https://alexjomin.github.io/podcasts/)
